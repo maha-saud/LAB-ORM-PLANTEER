@@ -5,14 +5,14 @@
 
 {% block content %}
 <div class="container">
-          <h2 class="text-dark fw-bold mb-4">Search Results: {{ plants.count}}</h2>
+          <h2 class="text-dark fw-bold mb-4">Search Results: {{ plants.count}}</h2> <!--هنا عشان يعرض لي عدد النتائج-->
 
 
           <div class="container w-100 mt-5">
         <form role="search" method="get"  action="{% url 'plant:plant_search_view' %}" class="row g-3 align-items-center my-5">
           
           <div class="col-lg-10 col-md-12">
-            <input class="form-control form-control-lg " minlength="3" type="search" name="search" placeholder="Search for a plant..." aria-label="Search" value="{{request.GET.search}}">
+            <input class="form-control form-control-lg " minlength="3" type="search" name="search" placeholder="Search for a plant..." aria-label="Search" value="{{request.GET.search}}"> <!-- اخر خانه عشان لو بحث يحتفظ بالي بحثت فيه في خانه البحث ولا يحذفه وقت عرض النتائج-->
           </div>
           
           <div class="col-lg-2 col-md-12">
